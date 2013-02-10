@@ -7,6 +7,7 @@ A simple implementation for the Islamic calender(Hijri) in Javascript
 I made this project just because I did not found any correct and open source Hijri converter. Each time I try one its either stored in database and fetch the data each time or it does not give me the correct date "specially when I try before 1420H"
 
 ## Usage
+### Current Day
 To get Today in Hijri:
 ```html
 <body onload="initWork()" >
@@ -23,6 +24,7 @@ To get Today in Hijri:
 	</script>
 </body>
 ```
+### Conversion
 To convert between Hijri and Gregorian use the ``HijriJS.toHijri(dateString, splitter)`` to convert Gregorian to Hijri 
 or ``HijriJS.toGregorian(dateString, splitter)``  to convert Hijri to Gregorian where the splitter is the symbol splits the date (e.g. for 1434/1/1 is ``HijriJS.toGregorian("1434/1/1", "/")``):
 ```html
@@ -45,7 +47,7 @@ or ``HijriJS.toGregorian(dateString, splitter)``  to convert Hijri to Gregorian 
 	</script>
 </body>
 ```
-
+### Formating
 More advanced is to print the date with different format you can use ``date.toFormat(yourStringFormat);`` where yourStringFormat can be:
 - **YYYY**: For the four digit year notation e.g. 1434.
 - **YY**: For two year notation e.g. 34 of 1434.
