@@ -68,6 +68,13 @@ function convertToHijri() {
 
 ```
 
+## License
+
+MIT licensed
+
+Copyright (C) 2013 Suhail Alkowaileet, http://xsoh.ws
+
+Contributors: --
 
 
 
