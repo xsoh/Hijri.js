@@ -140,17 +140,17 @@ var HijriJS = {
 			if (HijriJS.vlidateHijri(year, month, day)) {
 				var newFormat = format;
 
-				if (newFormat.contains("dd"))
+				if (newFormat.indexOf("dd") !== -1)
 					newFormat = newFormat.replace("dd", day < "10" ? "0" + day : day);
 				else
 					newFormat = newFormat.replace("d", day);
 
-				if (newFormat.contains("mm"))
+				if (newFormat.indexOf("mm") !== -1)
 					newFormat = newFormat.replace("mm", month < "10" ? "0" + month : month);
 				else
 					newFormat = newFormat.replace("m", month);
 
-				if (newFormat.contains("yyyy"))
+				if (newFormat.indexOf("yyyy") !== -1)
 					newFormat = newFormat.replace("yyyy", year);
 				else
 					newFormat = newFormat.replace("yy", year.substr((year.length - 2), 2));
@@ -192,6 +192,44 @@ var HijriJS = {
 			monthNames : ['Muharram', 'Safar', 'Rabi\' al-awwal', 'Rabi\' al-thani', 'Jumada al-awwal', 'Jumada al-thani', 'Rajab', 'Sha\'aban', 'Ramadan', 'Shawwal', 'Dhu al-Qi\'dah', 'Dhu al-Hijjah'],
 			monthShortNames : ['Muh', 'Saf', 'Rab1', 'Rab2', 'Jum1', 'Jum2', 'Raj', 'Sha\'', 'Ram', 'Shaw', 'DhuQ', 'DhuH'],
 			formatLocale : function(hDate) {// For English it will convert from currentLanguages numbers to Arabic numbers.
+				/*
+				 if (HijriJS.currentLanguage != 'en') {
+				 for ( i = 0; i < hDate.length; i++) {
+				 switch(hDate[i]) {
+				 case Hijrijs.lang[HijriJS.currentLanguage].zero:
+				 hDate[i] = Hijrijs.lang['en'].zero;
+				 break;
+				 case Hijrijs.lang[HijriJS.currentLanguage].one:
+				 hDate[i] = Hijrijs.lang['en'].one;
+				 break;
+				 case Hijrijs.lang[HijriJS.currentLanguage].two:
+				 hDate[i] = Hijrijs.lang['en'].two;
+				 break;
+				 case Hijrijs.lang[HijriJS.currentLanguage].three:
+				 hDate[i] = Hijrijs.lang['en'].three;
+				 break;
+				 case Hijrijs.lang[HijriJS.currentLanguage].four:
+				 hDate[i] = Hijrijs.lang['en'].four;
+				 break;
+				 case Hijrijs.lang[HijriJS.currentLanguage].five:
+				 hDate[i] = Hijrijs.lang['en'].five;
+				 break;
+				 case Hijrijs.lang[HijriJS.currentLanguage].six:
+				 hDate[i] = Hijrijs.lang['en'].six;
+				 break;
+				 case Hijrijs.lang[HijriJS.currentLanguage].seven:
+				 hDate[i] = Hijrijs.lang['en'].seven;
+				 break;
+				 case Hijrijs.lang[HijriJS.currentLanguage].ehgit:
+				 hDate[i] = Hijrijs.lang['en'].ehgit;
+				 break;
+				 case Hijrijs.lang[HijriJS.currentLanguage].nine:
+				 hDate[i] = Hijrijs.lang['en'].nine;
+				 break;
+				 }
+				 }
+				 }*/
+
 				return hDate;
 			}
 		}
