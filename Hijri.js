@@ -140,17 +140,17 @@ var HijriJS = {
 			if (HijriJS.vlidateHijri(year, month, day)) {
 				var newFormat = format;
 
-				if (newFormat.contains("dd"))
+				if (newFormat.indexOf("dd") !== -1)
 					newFormat = newFormat.replace("dd", day < "10" ? "0" + day : day);
 				else
 					newFormat = newFormat.replace("d", day);
 
-				if (newFormat.contains("mm"))
+				if (newFormat.indexOf("mm") !== -1)
 					newFormat = newFormat.replace("mm", month < "10" ? "0" + month : month);
 				else
 					newFormat = newFormat.replace("m", month);
 
-				if (newFormat.contains("yyyy"))
+				if (newFormat.indexOf("yyyy") !== -1)
 					newFormat = newFormat.replace("yyyy", year);
 				else
 					newFormat = newFormat.replace("yy", year.substr((year.length - 2), 2));
