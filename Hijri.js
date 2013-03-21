@@ -136,7 +136,7 @@ var HijriJS = {
 		this.toFormat = function toFormat(format) {
 			return this.format(this.year, this.month, this.day, format);
 		}
-		this.format = function format(year, month, day, format) {
+		this.format = function useFormat(year, month, day, format) {
 			if (HijriJS.vlidateHijri(year, month, day)) {
 				var newFormat = format;
 
