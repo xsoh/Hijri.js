@@ -124,7 +124,7 @@ var HijriJS = {
 		if (year <= 0) {
 			year--;
 		}// No year zero
-		return new Date(year + "/" + (month+1) + "/" + day);
+		return new Date(year + "/" + month + "/" + day);
 	},
 	HDate : function HDate(year, month, day) {
 		this.year = year;
